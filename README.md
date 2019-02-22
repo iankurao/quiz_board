@@ -9,7 +9,7 @@
 
 ## Setup instructions
 
-- `git clone' https://github.com/iankurao/quiz-board.git`
+- `git clone' https://github.com/iankurao/quiz_board.git`
 - `cd quiz-board`
 - `atom .`
 
@@ -23,7 +23,7 @@ The language mainly incorporated in this project is Javascript. However other la
 
 ## Link to live website
 
-https://iankurao.github.io/quiz-board/
+https://iankurao.github.io/quiz_board/
 
 
 ## Contact Information
