@@ -1,0 +1,13 @@
+h1 {
+  color: blue;
+  font-family: sans-serif;
+  text-decoration-style: wavy;
+  text-align: center;
+  margin: auto;
+  border: 20px;
+  padding: 30px;
+  background-color: #2B2D2F ;
+
+#after_submit {
+  visibility: hidden;
+}
