@@ -1,55 +1,47 @@
-// Business Logic
+//Business Logic
+function add(question1,question2,question3,question4,question5){
+  return question1 + question2 + question3 + question4 + question5;
+};
 
-function check() {
+// User Interface
 
-  var score=0
-  var questionNumbers=5;
+  $(document).ready(function() {var question1=parseInt($('input:radio[name=quiz1]:checked').val());
+   var question2=parseInt($('input:radio[name=quiz2]:checked').val());
+   var question3=parseInt($('input:radio[name=quiz3]:checked').val());
+   var question4=parseInt($('input:radio[name=quiz4]:checked').val());
+   var question5=parseInt($('input:radio[name=quiz5]:checked').val());
+  $("form#quiz").submit(function(event) {
+  event.preventDefault();
+   var question1=parseInt($('input:radio[name=quiz1]:checked').val());
+   var question2=parseInt($('input:radio[name=quiz2]:checked').val());
+   var question3=parseInt($('input:radio[name=quiz3]:checked').val());
+   var question4=parseInt($('input:radio[name=quiz4]:checked').val());
+   var question5=parseInt($('input:radio[name=quiz5]:checked').val());
+   var sum = add(question1,question2,question3,question4,question5);
 
-   var question1=parseInt('input:radio[name=quiz1]:checked').value;
-   var question2=parseInt('input:radio[name=quiz2]:checked').value;
-   var question3=parseInt('input:radio[name=quiz3]:checked').value;
-   var question4=parseInt('input:radio[name=quiz4]:checked').value;
-   var question5=parseInt('input:radio[name=quiz5]:checked').value;
-   var sum = parseInt(question1 + question2 + question3 + question4 + question5);
-   var output = document.getElementById("number_correct").innerHTML= sum;
+   $("#after_submit").text(sum);
 
+if (sum >= 80) {
+  $("#result").show();
+  $("#after_submit").text("Excellent" + sum);
 
-    for(var i = 1; i <= questionNumbers; i++){
-      if(('quiz'+ 1) == '') {
-       alert("answer all questions" + 1);
-     }
+} else if (sum <= 79 && sum>= 70) {
+  $("#result").show();
+  $("#after_submit").text("Well done! Your Score is " + sum);
 
-     if (quiz1 == "JAVASCRIPT") {
-       score++
-     }
-
-     if (quiz2 == ".reverse()") {
-       score++
-
-     }
-
-      if (quiz3 == ".pop()") {
-        score++
-
-      }
-
-     if (quiz4 == "unshift()") {
-       score++
-
-     }
-
-     if (quiz5 == "CSS") {
-       score++
-
-    }
+}  else if (sum <= 69 && sum>= 60) {
+    $("#result").show();
+    $("#after_submit").text("keep it up! Your Score is " + sum);
 
 
-    var number_correct = document.getElementById('number_correct');
-    number_correct.innerHTML= "<h2>Your score are " + score + " points out of " + questionNumbers + "</h2>"
+}  else if (sum <= 59 && sum>= 50) {
+    $("#result").show();
+    $("#after_submit").text("Fair! Your Score is " + sum);
 
-    alert("Your scores are " + score + " out of " + questionNumbers);
+}    else if (sum <= 49 && sum>= 40) {
+     $("#result").show();
+     $("#after_submit").text("You need to do better! Your Score is " + sum);
+    };
 
-
-
-}
-}
+  });
+ });
