@@ -36,7 +36,7 @@ whatsapp: 0723475550
 
 slack:@Ian
 
-##BDD
+##  Behaviour Driven Development
 
 \begin{table}[]
 \begin{tabular}{lll}
