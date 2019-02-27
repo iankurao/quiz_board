@@ -36,6 +36,21 @@ whatsapp: 0723475550
 
 slack:@Ian
 
+##BDD
+
+\begin{table}[]
+\begin{tabular}{lll}
+Behavior                                                                                    & User Input             & Expected Output   \\
+Program provides the user with questions to answer                                          & Loads up the page      & Question 1 to 5   \\
+Program rates the user out of 100\%                                                         & fills in all questions & Your score is 100 \\
+pRogram requires the user to scroll down after clicking the "I'm done" button to view score & Answer all questions   & Excellent         \\
+Program accepts the user input and calculates score                                         & all questions answered & Excellent 100    
+\end{tabular}
+\end{table}
+
+
+
+
 ## License
 MIT License
 
